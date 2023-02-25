@@ -2,6 +2,7 @@ import { currentWorkingDirectory, fs } from "../utils/shared.js";
 
 export function deleteTodo(index) {
   const deleteIndex = index;
+
   const fileData = fs
     .readFileSync(currentWorkingDirectory + "todo.md")
     .toString();

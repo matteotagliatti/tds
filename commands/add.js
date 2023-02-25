@@ -7,7 +7,10 @@ export function add(todo) {
     fs.writeFileSync(`${currentWorkingDirectory}/done.md`, "");
   }
 
-  const newTask = todo;
-  fs.appendFileSync(`${currentWorkingDirectory}/todo.md`, newTask + "\n");
-  console.log(`Added todo: "${newTask}"`);
+  const fileData = fs
+    .readFileSync(currentWorkingDirectory + "todo.md")
+    .toString();
+  fs.writeFileSync(currentWorkingDirectory + "todo.md", fileData + "\n" + todo);
+
+  console.log(`Added todo: "${todo}"`);
 }
