@@ -2,6 +2,7 @@
 import { program } from "commander";
 import { list } from "./commands/list.js";
 import { add } from "./commands/add.js";
+import { deleteTodo } from "./commands/delete.js";
 
 program
   .command("list", { isDefault: true })
@@ -9,5 +10,10 @@ program
   .action(list);
 
 program.command("add <todo>").description("Add a new todo").action(add);
+
+program
+  .command("delete <index>")
+  .description("Delete a todo via his index")
+  .action(deleteTodo);
 
 program.parse();
