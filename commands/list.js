@@ -14,4 +14,6 @@ export function list() {
   data.forEach((item, index) => {
     console.log(`${index + 1}. ${item}`);
   });
+
+  process.exit();
 }

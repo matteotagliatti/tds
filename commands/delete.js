@@ -16,4 +16,6 @@ export function deleteTodo(index) {
     fs.writeFileSync(currentWorkingDirectory + "todo.md", data.join("\n"));
     console.log(`Deleted todo ${deleteIndex}.`);
   }
+
+  process.exit();
 }
