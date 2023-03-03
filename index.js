@@ -9,7 +9,7 @@ program
   .description("List all the open todos")
   .action(list);
 
-program.command("add <todo>").description("Add a new todo").action(add);
+program.command("add").description("Add a new todo").action(add);
 
 program
   .command("delete <index>")
