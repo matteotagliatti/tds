@@ -1,6 +1,6 @@
 {
   "name": "@matteotagliatti/tds",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple CLI tool to manage my todos",
   "type": "module",
   "main": "index.js",
