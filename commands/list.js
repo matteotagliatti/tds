@@ -1,8 +1,10 @@
 import { currentWorkingDirectory, fs } from "../utils/shared.js";
 
-export function list() {
+export function list(file = "todo") {
   const fileData = fs
-    .readFileSync(currentWorkingDirectory + "todo.md")
+    .readFileSync(
+      currentWorkingDirectory + (file === "todo" ? "todo.md" : "done.md")
+    )
     .toString();
   let data = fileData.split("\n");
   data = data.filter((item) => item !== "");

@@ -7,6 +7,7 @@ import { done } from "./commands/done.js";
 
 program
   .command("list", { isDefault: true })
+  .arguments("[file]", { default: "todo" })
   .description("List all the open todos")
   .action(list);
 
