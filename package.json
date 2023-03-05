@@ -1,14 +1,17 @@
 {
-  "name": "todos",
+  "name": "@matteotagliatti/tds",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple CLI tool to manage my todos",
   "type": "module",
   "main": "index.js",
   "bin": {
     "tds": "./index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "todo",
+    "todolsit"
+  ],
+  "author": "Matteo Tagliatti",
   "license": "ISC",
   "dependencies": {
     "commander": "^10.0.0"
